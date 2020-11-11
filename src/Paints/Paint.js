@@ -8,10 +8,10 @@ const Paint = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const paint = fetch("http://api-qa.jazeerapaints.com/api/products")
+    const paint = fetch("https://api-qa.jazeerapaints.com/api/products")
       .then((response) => {
         return response.json();
-      })        
+      })
       .then((paint) => {
         console.log(paint);
         setAllProducts(paint.products);
@@ -25,12 +25,14 @@ const Paint = () => {
       {allProducts.map((x, index) => {
         return (
           <Product
-              sname={x.name}
-               imgsrc={(images.find((item) => item.id === x.can_img_id) || {})
-               .download_url}
-              Price={x.price}
-               links={x.slug}
-             />
+            sname={x.name}
+            imgsrc={
+              (images.find((item) => item.id === x.can_img_id) || {})
+                .download_url
+            }
+            Price={x.price}
+            links={x.slug}
+          />
         );
       })}
     </div>
