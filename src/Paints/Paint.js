@@ -8,7 +8,7 @@ const Paint = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const paint = fetch("https://api-qa.jazeerapaints.com/api/products")
+    const paint = fetch("http://api-qa.jazeerapaints.com/api/products")
       .then((response) => {
         return response.json();
       })
