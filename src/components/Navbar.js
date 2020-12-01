@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "./Navbar.css";
+import {UserContext} from '../UserContext/UserContext'
 // import SearchBar from "./SearchBar";
-const Navbar = () => {
+
+
+const Navbar = (props) => {
+   const cartProduct = useContext(UserContext);
   const [phrase, setPhrase] = useState("");
   const fixedURL = "https://qa.jazeerapaints.com/en/search?query=";
    const [mySearch, setUrl] = useState(fixedURL);
@@ -23,7 +27,7 @@ const Navbar = () => {
      setUrl();
    };
   return (
-    <div>
+    <>
       <nav>
         <ul className="left">
           <li>
@@ -32,7 +36,8 @@ const Navbar = () => {
               <span className="cart">
                 <i className="fas fa-cart-plus"></i>
               </span>
-              <span className="cartCount">0 </span>
+              <span className="cartCount">{cartProduct} </span>
+              {/* <span className="cartCount">{props.cartProduct.length} </span> */}
             </a>
             Cart
           </li>
@@ -47,7 +52,7 @@ const Navbar = () => {
             // onChange={(e) => setPhrase(e.target.value)}
           ></input>
         </div>
-        
+
         <ul className="Search">
           <span>
             <a
@@ -60,12 +65,11 @@ const Navbar = () => {
         </ul>
         <ul className="right">
           <li>
-            {" "}
-            دهانات الجزيرة Jazeera Paints<a href=""></a>{" "}
+            دهانات الجزيرة Jazeera Paints<a href=""></a>
           </li>
         </ul>
       </nav>
-    </div>
+    </>
   );
 };
 export default Navbar;
