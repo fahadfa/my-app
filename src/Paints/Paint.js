@@ -8,15 +8,12 @@ const Paint = (props) => {
   const cartProduct = useContext(UserContext);
   const [allProducts, setAllProducts] = useState([]);
   const [images, setImages] = useState([]);
-  // const [productFilter, setproductFilter] = useState([]);
 
   useEffect(() => {
     const paint = fetch(
-      "https://gist.githubusercontent.com/Sarfraz21/1f4f4f556adb3ba6910d28eac2d09f93/raw/64097fa499d5cdf9ae709ec0232f4a1807e2950c/product_api",
-      { cors: true }
-    )
-      .then((response) => {
-        return response.json();
+      "https://gist.githubusercontent.com/Sarfraz21/1f4f4f556adb3ba6910d28eac2d09f93/raw/64097fa499d5cdf9ae709ec0232f4a1807e2950c/product_api",{ cors: true }
+    ).then((response) => {
+      return response.json();
       })
       .then((paint) => {
         console.log(paint);

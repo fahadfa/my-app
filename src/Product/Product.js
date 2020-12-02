@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../UserContext/UserContext";
 // import "./Product.css";
 
 const Product = (props) => {
-  const Addtobasket = (e) => {
-   
+  // const addtobasket = (e) => {
+  //  props.cartProduct(e)
+
+  // };
+
+  const userContext = useContext(UserContext);
+  console.log("^^^^", userContext);
+
+  const addToBasket = (prod) => {
+    userContext.changeProducts(prod);
   };
+
   return (
     <>
       <div>
@@ -22,7 +32,7 @@ const Product = (props) => {
               <h5>{props.sname}</h5>
               <h5>{props.Price}</h5>
               <button
-                onClick={Addtobasket(props.name)}
+                onClick={addToBasket}
                 style={{ backgroundColor: "turquoise" }}
               >
                 Add to Basket
@@ -37,19 +47,18 @@ const Product = (props) => {
 
 export default Product;
 
-
- // <div>
-    //   {props.images.find((item) => item.id === props.imgsrc)}
-    //   <div className="cards">
-    //     <div className="card">
-    //       <img src={props.imgsrc} alt="mypic" className="card_img" style={{width:'150px',height:'100px'}} />
-    //       <div className="card_info">
-    //         <h3 className="card_title">{props.sname}</h3>
-    //         <span className="card_category">{props.Price} </span>
-    //         <a href={props.links} target="_blank">
-    //         <button className="Button">Buy Now</button>
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+// <div>
+//   {props.images.find((item) => item.id === props.imgsrc)}
+//   <div className="cards">
+//     <div className="card">
+//       <img src={props.imgsrc} alt="mypic" className="card_img" style={{width:'150px',height:'100px'}} />
+//       <div className="card_info">
+//         <h3 className="card_title">{props.sname}</h3>
+//         <span className="card_category">{props.Price} </span>
+//         <a href={props.links} target="_blank">
+//         <button className="Button">Buy Now</button>
+//         </a>
+//       </div>
+//     </div>
+//   </div>
+// </div>

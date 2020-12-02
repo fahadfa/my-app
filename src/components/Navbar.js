@@ -1,31 +1,30 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./Navbar.css";
-import {UserContext} from '../UserContext/UserContext'
+import { UserContext } from "../UserContext/UserContext";
 // import SearchBar from "./SearchBar";
 
-
 const Navbar = (props) => {
-   const cartProduct = useContext(UserContext);
+  const cartProduct = useContext(UserContext);
   const [phrase, setPhrase] = useState("");
   const fixedURL = "https://qa.jazeerapaints.com/en/search?query=";
-   const [mySearch, setUrl] = useState(fixedURL);
+  const [mySearch, setUrl] = useState(fixedURL);
   if (phrase === "Jazeera") {
     alert("Welcome to Jazeera Paints!");
   }
- const handleUserNameInput = (e) => {
-   setPhrase(e.target.value);
-   setUrl(fixedURL + e.target.value);
- };
- const onEnter = (e) => {
-   if (e.key === "Enter") {
-     setNewUrl();
-   }
- };
-   const setNewUrl = (e) => {
-     window.open(mySearch, "_blank");
-     setPhrase("");
-     setUrl();
-   };
+  const handleUserNameInput = (e) => {
+    setPhrase(e.target.value);
+    setUrl(fixedURL + e.target.value);
+  };
+  const onEnter = (e) => {
+    if (e.key === "Enter") {
+      setNewUrl();
+    }
+  };
+  const setNewUrl = (e) => {
+    window.open(mySearch, "_blank");
+    setPhrase("");
+    setUrl();
+  };
   return (
     <>
       <nav>
@@ -36,8 +35,7 @@ const Navbar = (props) => {
               <span className="cart">
                 <i className="fas fa-cart-plus"></i>
               </span>
-              <span className="cartCount">{cartProduct} </span>
-              {/* <span className="cartCount">{props.cartProduct.length} </span> */}
+              <span className="cartCount">{cartProduct.products.length} </span>
             </a>
             Cart
           </li>
