@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 function SearchBar() {
   const [userName, setUsername] = useState("");
-  const fixedURL = "https://qa.jazeerapaints.com/en/search?query=";
+  const fixedURL = "http://www.jazeerapaints.com/en/search?query=";
   const [mySearch, setUrl] = useState(fixedURL);
   const handleUserNameInput = (e) => {
     setUsername(e.target.value);
