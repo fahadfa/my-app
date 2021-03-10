@@ -1,21 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+git remote set-url origin https://<user>:<token>@github.com/<user>/<repo> .
+Try npm run deploy again
+"Cannot read property 'email' of null"#
 
-## Available Scripts
+If, when deploying, you get Cannot read property 'email' of null, try the following:
 
-In the project directory, you can run:
-
-### `npm start`
-Deploy log
-
-
-
-3:51:26 AM: Build ready to start
-3:51:28 AM: build-image version: d84c79427e8f83c1ba17bcdd7b3fe38059376b68
-3:51:28 AM: build-image tag: v3.6.1
-3:51:28 AM: buildbot version: d8e1c13dfa09a710800c3bc5ceee4ff2d6548477
-3:51:28 AM: Fetching cached dependencies
-3:51:28 AM: Failed to fetch cache, continuing with build
-3:51:28 AM: Starting to prepare the repo for build
+git config --global user.name '<your_name>'
+git config --global user.email '<your_email>'
+Try npm run deploy again ting to prepare the repo for build
 3:51:28 AM: No cached dependencies found. Cloning fresh repo
 3:51:28 AM: git clone https://github.com/Sarfraz21/my-app
 3:51:29 AM: Preparing Git Reference pull/2/head
