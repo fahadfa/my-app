@@ -1,6 +1,6 @@
 git remote set-url origin https://<user>:<token>@github.com/<user>/<repo> .
 Try npm run deploy again
-"Cannot read property 'email' of null"#
+"Cannot read property 'email' of null"
 
 If, when deploying, you get Cannot read property 'email' of null, try the following:
 
@@ -28,16 +28,16 @@ Try npm run deploy again ting to prepare the repo for build
 3:52:05 AM: > node -e "try{require('./postinstall')}catch(e){}"
 3:52:05 AM: > core-js@3.6.5 postinstall /opt/build/repo/node_modules/core-js
 3:52:05 AM: > node -e "try{require('./postinstall')}catch(e){}"
-3:52:05 AM: > core-js-pure@3.6.5 postinstall /opt/build/repo/node_modules/core-js-pure
+3:52:05 AM: > core-js-pure@3.6.5 postinstall //build/repo/node_modules/core-js-pure
 3:52:05 AM: > node -e "try{require('./postinstall')}catch(e){}"
-3:52:07 AM: npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
-3:52:07 AM: npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
-3:52:07 AM: npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+3:52:07 AM: npm WARN SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
+3:52:07 AM: npm WARN notsup SKIPPING DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+3:52:07 AM: npm WARN optional SKIPPING DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
 3:52:07 AM: npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 3:52:07 AM: npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/jest-haste-map/node_modules/fsevents):
-3:52:07 AM: npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
-3:52:07 AM: npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/fsevents):
-3:52:07 AM: npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+3:52:07 AM: npm WARN notsup SKIPPING DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+3:52:07 AM: npm WARN optional SKIPPING DEPENDENCY: fsevents@2.1.2 (node_modules/fsevents):
+3:52:07 AM: npm WARN notsup SKIPPING DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 3:52:08 AM: added 1643 packages from 792 contributors and audited 1647 packages in 32.285s
 3:52:09 AM: 74 packages are looking for funding
 3:52:09 AM:   run `npm fund` for details
@@ -55,10 +55,10 @@ Try npm run deploy again ting to prepare the repo for build
 3:52:11 AM:   Netlify Build                                                 
 3:52:11 AM: ────────────────────────────────────────────────────────────────
 3:52:11 AM: ​
-3:52:11 AM: ❯ Version
-3:52:11 AM:   @netlify/build 9.8.6
+3:52:11 AM:  Version
+3:52:11 AM:   build 9.8.6
 3:52:11 AM: ​
-3:52:11 AM: ❯ Flags
+3:52:11 AM: Flags
 3:52:11 AM:   deployId: 6048180efaf0a90007ee50e6
 3:52:11 AM:   mode: buildbot
 3:52:11 AM: ​
@@ -108,7 +108,7 @@ Try npm run deploy again ting to prepare the repo for build
 3:52:22 AM: npm ERR! Failed at the my-app@0.1.0 build script.
 3:52:22 AM: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 3:52:22 AM: npm ERR! A complete log of this run can be found in:
-3:52:22 AM: npm ERR!     /opt/buildhome/.npm/_logs/2021-03-10T00_52_22_567Z-debug.log
+3:52:22 AM: npm ERR!     /buildhome/.npm/_logs/2021-03-10T00_52_22_567Z-debug.log
 3:52:22 AM: ​
 3:52:22 AM: ────────────────────────────────────────────────────────────────
 3:52:22 AM:   "build.command" failed                                        
