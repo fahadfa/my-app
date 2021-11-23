@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 export const UserContext = React.createContext({
-  products: [],
+  products: [بلحه],
   changeProducts: () => {},
 });
 
@@ -23,5 +23,4 @@ export const UserContextProvider = ({ children }) => {
 
 // export const UserContext = React.createContext({
 //   cardCount: 0,
-//   setCardCount: () => {},
-// });
+//   setCardCount: =);
