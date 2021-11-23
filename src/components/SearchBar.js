@@ -2,11 +2,10 @@ import React, { useState } from "react";
 function SearchBar() {
   const [userName, setUsername] = useState("");
   const fixedURL = "https://qa.jazeerapaints.com/en/search?query=";
-  const [mySearch, setUrl] = useState(fixedURL);
-  const handleUserNameInput = (e) => {
+  const [mySearch, setUrl]  useState(fixedURL);
+  const handleUserNameInput = () => {
     setUsername(e.target.value);
     setUrl(fixedURL + e.target.value);
-  };
   const onEnter = (e) => {
     if (e.key === "Enter") {
       setNewUrl();
@@ -14,7 +13,7 @@ function SearchBar() {
   };
   const setNewUrl = (e) => {
     window.open(mySearch, "_blank");
-    setUsername("");
+    setUsername();
     setUrl();
   };
   return (
